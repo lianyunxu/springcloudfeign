@@ -16,9 +16,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class FeignController {
     @Autowired
-    private ComputerClient  computerClient;
+    private ComputerClient   coClient;
     @RequestMapping(value="/add",method =RequestMethod.GET)
     public Integer add(){
-        return  computerClient.add(10,20);
+        return  coClient.add(10,20);
     }
 }
